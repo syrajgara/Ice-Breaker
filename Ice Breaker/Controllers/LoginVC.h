@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginVC : UIViewController <QBActionStatusDelegate, QBChatDelegate>
-//test
 @end
 
 
