@@ -12,8 +12,6 @@
 		361C6FBC173734F3008FA28D /* ChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C6FBB173734F3008FA28D /* ChatVC.m */; };
 		36616847173743C20083B242 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36616844173743C20083B242 /* ECSlidingViewController.m */; };
 		36616848173743C20083B242 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36616846173743C20083B242 /* UIImage+ImageWithUIView.m */; };
-		3661684B173744090083B242 /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3661684A173744090083B242 /* InitialSlidingViewController.m */; };
-		3661684E173744840083B242 /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3661684D173744840083B242 /* MenuVC.m */; };
 		366168501737459B0083B242 /* nav_menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3661684F1737459B0083B242 /* nav_menu_icon@2x.png */; };
 		366B6010173882E0000970D5 /* EventMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B600F173882E0000970D5 /* EventMapVC.m */; };
 		366B6016173884BD000970D5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366B6015173884BD000970D5 /* MapKit.framework */; };
@@ -37,30 +35,28 @@
 		36A439BA1736FD7900155B56 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A439B91736FD7900155B56 /* libz.dylib */; };
 		36A439BC1736FD8000155B56 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A439BB1736FD8000155B56 /* libresolv.dylib */; };
 		36A439BE1736FD9000155B56 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A439BD1736FD9000155B56 /* libxml2.dylib */; };
-		36A439C61737028000155B56 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36A439C41737028000155B56 /* Model.xcdatamodeld */; };
 		36A439CB1737047900155B56 /* iPhoneMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A439CA1737047900155B56 /* iPhoneMainStoryboard.storyboard */; };
 		36A439CE173705B800155B56 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A439CD173705B800155B56 /* LoginVC.m */; };
 		36A43A0C173717A900155B56 /* SignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A43A0B173717A900155B56 /* SignupVC.m */; };
+		36E906F5173CE2870039CB9F /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E906F2173CE2870039CB9F /* InitialSlidingViewController.m */; };
+		36E906F6173CE2870039CB9F /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E906F4173CE2870039CB9F /* MenuVC.m */; };
+		36E906F9173CE54A0039CB9F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36E906F7173CE54A0039CB9F /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		361C6FB117372AE3008FA28D /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = Database/DataManager.h; sourceTree = "<group>"; };
 		361C6FB217372AE3008FA28D /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = Database/DataManager.m; sourceTree = "<group>"; };
-		361C6FB7173734E0008FA28D /* AvailableForChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvailableForChatVC.h; path = "Ice Breaker/Controllers/AvailableForChatVC.h"; sourceTree = "<group>"; };
-		361C6FB8173734E0008FA28D /* AvailableForChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvailableForChatVC.m; path = "Ice Breaker/Controllers/AvailableForChatVC.m"; sourceTree = "<group>"; };
-		361C6FBA173734F3008FA28D /* ChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatVC.h; path = "Ice Breaker/Controllers/ChatVC.h"; sourceTree = "<group>"; };
-		361C6FBB173734F3008FA28D /* ChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatVC.m; path = "Ice Breaker/Controllers/ChatVC.m"; sourceTree = "<group>"; };
+		361C6FB7173734E0008FA28D /* AvailableForChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvailableForChatVC.h; path = "Ice Breaker/Controllers/ChatMenu/AvailableForChatVC.h"; sourceTree = "<group>"; };
+		361C6FB8173734E0008FA28D /* AvailableForChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvailableForChatVC.m; path = "Ice Breaker/Controllers/ChatMenu/AvailableForChatVC.m"; sourceTree = "<group>"; };
+		361C6FBA173734F3008FA28D /* ChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatVC.h; path = "Ice Breaker/Controllers/ChatMenu/ChatVC.h"; sourceTree = "<group>"; };
+		361C6FBB173734F3008FA28D /* ChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatVC.m; path = "Ice Breaker/Controllers/ChatMenu/ChatVC.m"; sourceTree = "<group>"; };
 		36616843173743C20083B242 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
 		36616844173743C20083B242 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
 		36616845173743C20083B242 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
 		36616846173743C20083B242 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
-		36616849173744090083B242 /* InitialSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialSlidingViewController.h; sourceTree = "<group>"; };
-		3661684A173744090083B242 /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSlidingViewController.m; sourceTree = "<group>"; };
-		3661684C173744840083B242 /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
-		3661684D173744840083B242 /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
 		3661684F1737459B0083B242 /* nav_menu_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nav_menu_icon@2x.png"; path = "Ice Breaker/nav_menu_icon@2x.png"; sourceTree = "<group>"; };
-		366B600E173882E0000970D5 /* EventMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventMapVC.h; path = "Ice Breaker/Controllers/EventMapVC.h"; sourceTree = "<group>"; };
-		366B600F173882E0000970D5 /* EventMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventMapVC.m; path = "Ice Breaker/Controllers/EventMapVC.m"; sourceTree = "<group>"; };
+		366B600E173882E0000970D5 /* EventMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventMapVC.h; path = "Ice Breaker/Controllers/EventMenu/EventMapVC.h"; sourceTree = "<group>"; };
+		366B600F173882E0000970D5 /* EventMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventMapVC.m; path = "Ice Breaker/Controllers/EventMenu/EventMapVC.m"; sourceTree = "<group>"; };
 		366B6015173884BD000970D5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		36A4397D1736F6E600155B56 /* Ice Breaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ice Breaker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A439801736F6E600155B56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -85,13 +81,17 @@
 		36A439B91736FD7900155B56 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		36A439BB1736FD8000155B56 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		36A439BD1736FD9000155B56 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		36A439C51737028000155B56 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		36A439C9173703B500155B56 /* Ice Breaker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Ice Breaker-Prefix.pch"; path = "Supporting Files/Ice Breaker-Prefix.pch"; sourceTree = "<group>"; };
 		36A439CA1737047900155B56 /* iPhoneMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhoneMainStoryboard.storyboard; path = Storyboards/iPhoneMainStoryboard.storyboard; sourceTree = "<group>"; };
-		36A439CC173705B800155B56 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVC.h; path = "Ice Breaker/Controllers/LoginVC.h"; sourceTree = "<group>"; };
-		36A439CD173705B800155B56 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = "Ice Breaker/Controllers/LoginVC.m"; sourceTree = "<group>"; };
-		36A43A0A173717A900155B56 /* SignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupVC.h; path = "Ice Breaker/Controllers/SignupVC.h"; sourceTree = "<group>"; };
-		36A43A0B173717A900155B56 /* SignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupVC.m; path = "Ice Breaker/Controllers/SignupVC.m"; sourceTree = "<group>"; };
+		36A439CC173705B800155B56 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVC.h; path = "Ice Breaker/Controllers/Login/LoginVC.h"; sourceTree = "<group>"; };
+		36A439CD173705B800155B56 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = "Ice Breaker/Controllers/Login/LoginVC.m"; sourceTree = "<group>"; };
+		36A43A0A173717A900155B56 /* SignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupVC.h; path = "Ice Breaker/Controllers/Login/SignupVC.h"; sourceTree = "<group>"; };
+		36A43A0B173717A900155B56 /* SignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupVC.m; path = "Ice Breaker/Controllers/Login/SignupVC.m"; sourceTree = "<group>"; };
+		36E906F1173CE2870039CB9F /* InitialSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialSlidingViewController.h; path = "Ice Breaker/Controllers/MainMenu/InitialSlidingViewController.h"; sourceTree = "<group>"; };
+		36E906F2173CE2870039CB9F /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialSlidingViewController.m; path = "Ice Breaker/Controllers/MainMenu/InitialSlidingViewController.m"; sourceTree = "<group>"; };
+		36E906F3173CE2870039CB9F /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuVC.h; path = "Ice Breaker/Controllers/MainMenu/MenuVC.h"; sourceTree = "<group>"; };
+		36E906F4173CE2870039CB9F /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuVC.m; path = "Ice Breaker/Controllers/MainMenu/MenuVC.m"; sourceTree = "<group>"; };
+		36E906F8173CE54A0039CB9F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +145,10 @@
 		366B6011173882F3000970D5 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
-				3661684C173744840083B242 /* MenuVC.h */,
-				3661684D173744840083B242 /* MenuVC.m */,
-				36616849173744090083B242 /* InitialSlidingViewController.h */,
-				3661684A173744090083B242 /* InitialSlidingViewController.m */,
+				36E906F1173CE2870039CB9F /* InitialSlidingViewController.h */,
+				36E906F2173CE2870039CB9F /* InitialSlidingViewController.m */,
+				36E906F3173CE2870039CB9F /* MenuVC.h */,
+				36E906F4173CE2870039CB9F /* MenuVC.m */,
 			);
 			name = MainMenu;
 			sourceTree = "<group>";
@@ -187,7 +187,6 @@
 		36A439741736F6E600155B56 = {
 			isa = PBXGroup;
 			children = (
-				366B6015173884BD000970D5 /* MapKit.framework */,
 				36A439881736F6E600155B56 /* Ice Breaker */,
 				36A4397F1736F6E600155B56 /* Frameworks */,
 				36A4397E1736F6E600155B56 /* Products */,
@@ -205,6 +204,7 @@
 		36A4397F1736F6E600155B56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				366B6015173884BD000970D5 /* MapKit.framework */,
 				36A439801736F6E600155B56 /* UIKit.framework */,
 				36A439821736F6E600155B56 /* Foundation.framework */,
 				36A439841736F6E600155B56 /* CoreGraphics.framework */,
@@ -255,9 +255,9 @@
 		36A439A21736F6F900155B56 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				36E906F7173CE54A0039CB9F /* Model.xcdatamodeld */,
 				361C6FB117372AE3008FA28D /* DataManager.h */,
 				361C6FB217372AE3008FA28D /* DataManager.m */,
-				36A439C41737028000155B56 /* Model.xcdatamodeld */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -357,7 +357,6 @@
 			files = (
 				36A4398F1736F6E600155B56 /* main.m in Sources */,
 				36A439931736F6E600155B56 /* AppDelegate.m in Sources */,
-				36A439C61737028000155B56 /* Model.xcdatamodeld in Sources */,
 				36A439CE173705B800155B56 /* LoginVC.m in Sources */,
 				36A43A0C173717A900155B56 /* SignupVC.m in Sources */,
 				361C6FB317372AE3008FA28D /* DataManager.m in Sources */,
@@ -365,9 +364,10 @@
 				361C6FBC173734F3008FA28D /* ChatVC.m in Sources */,
 				36616847173743C20083B242 /* ECSlidingViewController.m in Sources */,
 				36616848173743C20083B242 /* UIImage+ImageWithUIView.m in Sources */,
-				3661684B173744090083B242 /* InitialSlidingViewController.m in Sources */,
-				3661684E173744840083B242 /* MenuVC.m in Sources */,
 				366B6010173882E0000970D5 /* EventMapVC.m in Sources */,
+				36E906F5173CE2870039CB9F /* InitialSlidingViewController.m in Sources */,
+				36E906F6173CE2870039CB9F /* MenuVC.m in Sources */,
+				36E906F9173CE54A0039CB9F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,13 +509,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		36A439C41737028000155B56 /* Model.xcdatamodeld */ = {
+		36E906F7173CE54A0039CB9F /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				36A439C51737028000155B56 /* Model.xcdatamodel */,
+				36E906F8173CE54A0039CB9F /* Model.xcdatamodel */,
 			);
-			currentVersion = 36A439C51737028000155B56 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = 36E906F8173CE54A0039CB9F /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = Database/Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
