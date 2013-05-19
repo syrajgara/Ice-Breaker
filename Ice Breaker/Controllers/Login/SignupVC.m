@@ -19,6 +19,13 @@
 
 @implementation SignupVC
 
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  
+  self.navigationController.navigationBarHidden=YES;
+}
+
 - (IBAction)signup:(UIButton *)sender
 {
   NSLog(@" username = %@", self.userName.text);
@@ -41,17 +48,14 @@
   // QuickBlox User creation result
   if([result isKindOfClass:[QBUUserResult class]])
   {
-    
-    NSLog(@" username = %@", self.userName.text);
-    
 		if ( !result.success )
     {
       // Errors
       NSString *errorTags = [result.errors componentsJoinedByString:@"\n"];
       
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Errors"
+      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                       message:[NSString stringWithFormat:@"%@",errorTags]
-                                                     delegate:self
+                                                     delegate:nil
                                             cancelButtonTitle:@"Okay"
                                             otherButtonTitles:nil, nil];
       
@@ -61,20 +65,21 @@
 		}
 
     QBAuthenticator *qbAuthenticator = [[QBAuthenticator alloc] init];
-    
-    [qbAuthenticator loginWithUserName:self.userName.text
-                           andPassword:self.password.text
+
+    [qbAuthenticator loginWithUserName:@"trupti"
+                           andPassword:@"password"
               withLoginResponseHandler:self];
+
+    /*
+     TESTING
+     
+     [qbAuthenticator loginWithUserName:self.userName.text
+     andPassword:self.password.text
+     withLoginResponseHandler:self];
+
+     */
+  
   }
-}
-
-#pragma mark
-#pragma mark UIAlertView delegate
-
-- (void)      alertView:(UIAlertView *)alertView
-   clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-  [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

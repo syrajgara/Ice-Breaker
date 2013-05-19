@@ -10,6 +10,6 @@
 
 #import "IceBreakerBaseVC.h"
 
-@interface SignupVC : IceBreakerBaseVC <QBChatDelegate, UIAlertViewDelegate>
+@interface SignupVC : IceBreakerBaseVC <QBActionStatusDelegate, QBChatDelegate>
 
 @end

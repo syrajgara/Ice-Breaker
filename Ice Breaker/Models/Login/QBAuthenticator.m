@@ -43,7 +43,7 @@
 // QuickBlox queries delegate
 - (void)completedWithResult:(Result *)result
 {
-  NSLog(@"completed login...");
+  NSLog(@"login results ...");
   
   // Create session result
   if(result.success && [result isKindOfClass:QBAAuthSessionCreationResult.class])
@@ -74,7 +74,7 @@
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@",errorTags]
                                                     message:@"Please check your email address and password"
-                                                   delegate:Nil
+                                                   delegate:nil
                                           cancelButtonTitle:@"Okay"
                                           otherButtonTitles:nil, nil];
     

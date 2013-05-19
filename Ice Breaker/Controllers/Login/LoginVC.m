@@ -31,17 +31,16 @@
 {
   QBAuthenticator *qbAuthenticator = [[QBAuthenticator alloc] init];
 
-  [qbAuthenticator loginWithUserName:self.userName.text
-                         andPassword:self.password.text
+  [qbAuthenticator loginWithUserName:@"trupti"
+                         andPassword:@"password"
             withLoginResponseHandler:self];
-
-/*
- TESTING 
- 
- [qbAuthenticator loginWithUserName:@"trupti" //self.userName.text //
- andPassword:@"password" //self.password.text //
- withLoginResponseHandler:self];
- */
+  /*
+   TESTING
+   
+   [qbAuthenticator loginWithUserName:self.userName.text
+   andPassword:self.password.text
+   withLoginResponseHandler:self];
+   */
 }
 
 /*

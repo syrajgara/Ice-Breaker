@@ -35,7 +35,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RdI-gv-l6z" kind="modal" identifier="SignupSegue" modalTransitionStyle="flipHorizontal" id="ycL-Ts-w9p"/>
+                                    <segue destination="6Kt-Gn-XR1" kind="modal" modalTransitionStyle="flipHorizontal" id="gMu-CK-2AV"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cB-O5-fOm">
@@ -134,14 +134,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUm-as-bxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2288" y="753"/>
+            <point key="canvasLocation" x="2376" y="753"/>
         </scene>
-        <!--SignupVC - Title-->
+        <!--Navigation Controller-->
+        <scene sceneID="VTz-Jk-tVu">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="6Kt-Gn-XR1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="act-fK-0b1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RdI-gv-l6z" kind="relationship" relationship="rootViewController" id="qYv-kh-bfW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASf-We-KdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="-765"/>
+        </scene>
+        <!--SignupVC-->
         <scene sceneID="jBV-na-syC">
             <objects>
                 <viewController storyboardIdentifier="SignupVC" id="RdI-gv-l6z" customClass="SignupVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ra1-2s-N8z">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGf-st-a22">
@@ -181,7 +196,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BmY-zt-jix" kind="unwind" unwindAction="cancelSignup:" id="jGz-K1-t3D"/>
+                                    <segue destination="BmY-zt-jix" kind="unwind" unwindAction="cancelSignup:" id="ceW-3z-Mr0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -200,7 +215,7 @@
                             <constraint firstItem="zh2-ui-za7" firstAttribute="top" secondItem="BGf-st-a22" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qng-Vc-A67"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="MCT-D8-61v"/>
+                    <navigationItem key="navigationItem" id="MCT-D8-61v"/>
                     <connections>
                         <outlet property="password" destination="uXL-Ux-wgI" id="CSs-XG-7cW"/>
                         <outlet property="userName" destination="cyN-rk-wEd" id="73L-Lx-FTR"/>
@@ -210,7 +225,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXx-N0-Wr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BmY-zt-jix" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="932" y="-81"/>
+            <point key="canvasLocation" x="1020" y="-81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6nY-r8-hf5">
@@ -235,7 +250,7 @@
             <objects>
                 <viewController storyboardIdentifier="Menu" id="IgP-2h-Fvy" customClass="MenuVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WrE-pD-9lv">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HmN-ot-khh">
@@ -269,14 +284,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Us6-QX-TgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="149"/>
+            <point key="canvasLocation" x="1921" y="149"/>
         </scene>
         <!--Initial Sliding View Controller-->
         <scene sceneID="Jdg-ef-tEY">
             <objects>
                 <viewController id="Lem-Qx-Rir" customClass="InitialSlidingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NzL-h3-bfg">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -289,14 +304,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyO-HU-Zpw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="753"/>
+            <point key="canvasLocation" x="1310" y="753"/>
         </scene>
         <!--Available For ChatVC-->
         <scene sceneID="lj5-QW-wa9">
             <objects>
                 <viewController storyboardIdentifier="AvailableForChatVC" id="PeC-4Z-O5J" customClass="AvailableForChatVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7rz-ZF-fnm">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-qB-C8A">
@@ -348,17 +363,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCz-Bw-3e0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="753"/>
+            <point key="canvasLocation" x="1921" y="753"/>
         </scene>
         <!--Event MapVC-->
         <scene sceneID="D4j-4x-dpC">
             <objects>
                 <viewController storyboardIdentifier="EventMapVC" id="4SP-kM-r8w" customClass="EventMapVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c55-ku-FdS">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-oS-e11"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-oS-e11">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="416" id="BRs-mL-xhF"/>
+                                </constraints>
+                            </mapView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N1F-bL-zIu">
                                 <items>
                                     <navigationItem title="Event Map" id="Mo9-ia-Ihf">
@@ -377,9 +396,8 @@
                             <constraint firstItem="N1F-bL-zIu" firstAttribute="leading" secondItem="c55-ku-FdS" secondAttribute="leading" type="default" id="BP8-ea-Pc0"/>
                             <constraint firstItem="Buo-oS-e11" firstAttribute="leading" secondItem="c55-ku-FdS" secondAttribute="leading" type="default" id="LSt-qp-CR2"/>
                             <constraint firstItem="N1F-bL-zIu" firstAttribute="top" secondItem="c55-ku-FdS" secondAttribute="top" type="default" id="Pei-DH-va6"/>
-                            <constraint firstItem="Buo-oS-e11" firstAttribute="bottom" secondItem="c55-ku-FdS" secondAttribute="bottom" type="default" id="SnW-I9-lbm"/>
                             <constraint firstItem="N1F-bL-zIu" firstAttribute="trailing" secondItem="c55-ku-FdS" secondAttribute="trailing" type="default" id="h0D-kz-K0t"/>
-                            <constraint firstItem="Buo-oS-e11" firstAttribute="top" secondItem="N1F-bL-zIu" secondAttribute="bottom" type="default" id="wxq-kN-TsE"/>
+                            <constraint firstItem="Buo-oS-e11" firstAttribute="top" secondItem="c55-ku-FdS" secondAttribute="top" constant="43" id="hxN-dH-8J2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eCJ-xw-3X2"/>
@@ -389,69 +407,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9g2-19-vdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="1346"/>
+            <point key="canvasLocation" x="1921" y="1346"/>
         </scene>
     </scenes>
     <resources>
         <image name="nav_menu_icon.png" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="AvailableForChatVC" superclassName="IceBreakerBaseVC">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AvailableForChatVC.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="ChatVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChatVC.h"/>
-            <relationships>
-                <relationship kind="action" name="sendMessageButton:"/>
-                <relationship kind="outlet" name="messageField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sendButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
-            </relationships>
-        </class>
-        <class className="ECSlidingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
-        </class>
-        <class className="EventMapVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventMapVC.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="outlet" name="eventMap" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="IceBreakerBaseVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IceBreakerBaseVC.h"/>
-        </class>
-        <class className="InitialSlidingViewController" superclassName="ECSlidingViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialSlidingViewController.h"/>
-        </class>
-        <class className="LoginVC" superclassName="IceBreakerBaseVC">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MenuVC" superclassName="IceBreakerBaseVC">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuVC.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SignupVC" superclassName="IceBreakerBaseVC">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignupVC.h"/>
-            <relationships>
-                <relationship kind="action" name="signup:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
