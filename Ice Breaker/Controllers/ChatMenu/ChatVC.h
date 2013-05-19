@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChatVC : UIViewController<UITextFieldDelegate, QBChatDelegate>{
+#import "IceBreakerBaseVC.h"
+
+@interface ChatVC : IceBreakerBaseVC <UITextFieldDelegate, QBChatDelegate>
+{
 }
 
 @property (nonatomic, retain) QBUUser        *opponent;

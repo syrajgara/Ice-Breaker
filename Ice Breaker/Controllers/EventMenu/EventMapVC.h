@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EventMapVC : UIViewController <QBActionStatusDelegate, QBChatDelegate>
+#import "IceBreakerBaseVC.h"
+
+@interface EventMapVC : IceBreakerBaseVC <QBActionStatusDelegate, QBChatDelegate>
 
 @end

@@ -28,8 +28,8 @@
 {
   [super viewDidLoad];
   
-  [self.slidingViewController setAnchorRightRevealAmount:280.0f];
-  self.slidingViewController.underLeftWidthLayout = ECFixedRevealWidth;
+  [self.slidingViewController setAnchorRightPeekAmount:49.0f];
+  self.slidingViewController.underLeftWidthLayout = ECFullWidth; //ECVariableRevealWidth;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -66,12 +66,8 @@
 
   UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
   
-  [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
-    CGRect frame = self.slidingViewController.topViewController.view.frame;
-    self.slidingViewController.topViewController = newTopViewController;
-    self.slidingViewController.topViewController.view.frame = frame;
-    [self.slidingViewController resetTopView];
-  }];
+  self.slidingViewController.topViewController = newTopViewController;
+  [self.slidingViewController resetTopView];
 }
 
 @end
