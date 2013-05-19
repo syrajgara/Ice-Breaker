@@ -23,7 +23,8 @@
   self.view.layer.borderColor = [UIColor redColor].CGColor;
   self.view.layer.borderWidth = 1.0f;
   self.view.layer.cornerRadius = 7.0f;
-  
+  [self.view.layer setMasksToBounds:YES];
+
   // TODO following wont work since the sub-views are being clipped.
   // shadowPath, shadowOffset, and rotation is handled by ECSlidingViewController.
   // You just need to set the opacity, radius, and color.

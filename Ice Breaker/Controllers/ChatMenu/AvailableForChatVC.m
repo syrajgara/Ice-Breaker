@@ -34,9 +34,10 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    [self updateUsers];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+
+  // Do any additional setup after loading the view.
+  [self updateUsers];
 }
 
 - (void)reloadAvailableForChat

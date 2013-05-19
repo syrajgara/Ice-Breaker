@@ -32,6 +32,22 @@
   self.slidingViewController.underLeftWidthLayout = ECFullWidth; //ECVariableRevealWidth;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+  [self.slidingViewController.topViewController.view.layer setMasksToBounds:NO];
+  self.slidingViewController.topViewController.view.layer.cornerRadius = 0.0f;
+
+  [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+  [self.slidingViewController.topViewController.view.layer setMasksToBounds:YES];
+  self.slidingViewController.topViewController.view.layer.cornerRadius = 7.0f;
+  
+  [super viewWillDisappear:animated];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   return 2;
@@ -67,6 +83,7 @@
   UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
   
   self.slidingViewController.topViewController = newTopViewController;
+
   [self.slidingViewController resetTopView];
 }
 
