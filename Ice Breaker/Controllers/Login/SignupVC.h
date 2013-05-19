@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignupVC : UIViewController
+#import "IceBreakerBaseVC.h"
+
+@interface SignupVC : IceBreakerBaseVC <QBChatDelegate, UIAlertViewDelegate>
 
 @end

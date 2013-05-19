@@ -10,9 +10,10 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import <MapKit/MapKit.h>
+
 #import "ECSlidingViewController.h"
 #import "MenuVC.h"
-#import <MapKit/MapKit.h>
 
 @interface EventMapVC ()
 @property (weak, nonatomic) IBOutlet MKMapView *eventMap;

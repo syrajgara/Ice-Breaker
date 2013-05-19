@@ -7,11 +7,13 @@
 //
 
 #import "AvailableForChatVC.h"
-#import "DataManager.h"
-#import "ChatVC.h"
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+
+#import "DataManager.h"
+#import "ChatVC.h"
+
 #import "ECSlidingViewController.h"
 #import "MenuVC.h"
 

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginVC : UIViewController <QBActionStatusDelegate, QBChatDelegate>
-//test
+#import "IceBreakerBaseVC.h"
+
+@interface LoginVC : IceBreakerBaseVC <QBChatDelegate>
+
 @end
 
 

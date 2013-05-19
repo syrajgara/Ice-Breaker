@@ -8,8 +8,12 @@
 
 #import "MenuVC.h"
 
+#import "ECSlidingViewController.h"
+
 @interface MenuVC()
+
 @property (nonatomic, strong) NSArray *menuItems;
+
 @end
 
 @implementation MenuVC

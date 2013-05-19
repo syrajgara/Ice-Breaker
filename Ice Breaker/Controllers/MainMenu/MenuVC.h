@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ECSlidingViewController.h"
 
-@interface MenuVC : UIViewController <UITableViewDataSource>
+#import "IceBreakerBaseVC.h"
+
+@interface MenuVC : IceBreakerBaseVC <UITableViewDataSource>
 
 @end

@@ -10,6 +10,8 @@
 		361C6FB317372AE3008FA28D /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C6FB217372AE3008FA28D /* DataManager.m */; };
 		361C6FB9173734E0008FA28D /* AvailableForChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C6FB8173734E0008FA28D /* AvailableForChatVC.m */; };
 		361C6FBC173734F3008FA28D /* ChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C6FBB173734F3008FA28D /* ChatVC.m */; };
+		3629ADD0174856150052B1A5 /* IceBreakerBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3629ADCF174856150052B1A5 /* IceBreakerBaseVC.m */; };
+		3629ADD3174864A40052B1A5 /* QBAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3629ADD2174864A30052B1A5 /* QBAuthenticator.m */; };
 		36616847173743C20083B242 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36616844173743C20083B242 /* ECSlidingViewController.m */; };
 		36616848173743C20083B242 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36616846173743C20083B242 /* UIImage+ImageWithUIView.m */; };
 		366168501737459B0083B242 /* nav_menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3661684F1737459B0083B242 /* nav_menu_icon@2x.png */; };
@@ -50,6 +52,10 @@
 		361C6FB8173734E0008FA28D /* AvailableForChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvailableForChatVC.m; path = "Ice Breaker/Controllers/ChatMenu/AvailableForChatVC.m"; sourceTree = "<group>"; };
 		361C6FBA173734F3008FA28D /* ChatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatVC.h; path = "Ice Breaker/Controllers/ChatMenu/ChatVC.h"; sourceTree = "<group>"; };
 		361C6FBB173734F3008FA28D /* ChatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatVC.m; path = "Ice Breaker/Controllers/ChatMenu/ChatVC.m"; sourceTree = "<group>"; };
+		3629ADCE174856150052B1A5 /* IceBreakerBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IceBreakerBaseVC.h; path = "Ice Breaker/Controllers/Common/IceBreakerBaseVC.h"; sourceTree = "<group>"; };
+		3629ADCF174856150052B1A5 /* IceBreakerBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IceBreakerBaseVC.m; path = "Ice Breaker/Controllers/Common/IceBreakerBaseVC.m"; sourceTree = "<group>"; };
+		3629ADD1174864A30052B1A5 /* QBAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBAuthenticator.h; path = "Ice Breaker/Models/Login/QBAuthenticator.h"; sourceTree = "<group>"; };
+		3629ADD2174864A30052B1A5 /* QBAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QBAuthenticator.m; path = "Ice Breaker/Models/Login/QBAuthenticator.m"; sourceTree = "<group>"; };
 		36616843173743C20083B242 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
 		36616844173743C20083B242 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
 		36616845173743C20083B242 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
@@ -123,6 +129,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3629ADCD174855D00052B1A5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3629ADCE174856150052B1A5 /* IceBreakerBaseVC.h */,
+				3629ADCF174856150052B1A5 /* IceBreakerBaseVC.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		3629ADD4174864AF0052B1A5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3629ADD1174864A30052B1A5 /* QBAuthenticator.h */,
+				3629ADD2174864A30052B1A5 /* QBAuthenticator.m */,
+			);
+			name = Login;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		3629ADD5174864B90052B1A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3629ADD4174864AF0052B1A5 /* Login */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		36616841173743C20083B242 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +264,7 @@
 			children = (
 				36A439BF1736FF8800155B56 /* Storyboards */,
 				36A439CF173705BE00155B56 /* Controllers */,
+				3629ADD5174864B90052B1A5 /* Models */,
 				36A439A21736F6F900155B56 /* Database */,
 				36A439891736F6E600155B56 /* Supporting Files */,
 				36616841173743C20083B242 /* Vendor */,
@@ -273,6 +307,7 @@
 		36A439CF173705BE00155B56 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3629ADCD174855D00052B1A5 /* Common */,
 				366B60131738832D000970D5 /* Login */,
 				366B6011173882F3000970D5 /* MainMenu */,
 				366B601417388343000970D5 /* ChatMenu */,
@@ -368,6 +403,8 @@
 				36E906F5173CE2870039CB9F /* InitialSlidingViewController.m in Sources */,
 				36E906F6173CE2870039CB9F /* MenuVC.m in Sources */,
 				36E906F9173CE54A0039CB9F /* Model.xcdatamodeld in Sources */,
+				3629ADD0174856150052B1A5 /* IceBreakerBaseVC.m in Sources */,
+				3629ADD3174864A40052B1A5 /* QBAuthenticator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

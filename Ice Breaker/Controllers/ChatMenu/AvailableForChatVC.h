@@ -6,7 +6,9 @@
 //  Copyright (c) 2013 trupti hosmani. All rights reserved.
 //
 
-@interface AvailableForChatVC : UIViewController <UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, QBActionStatusDelegate, QBChatDelegate>{
+#import "IceBreakerBaseVC.h"
+
+@interface AvailableForChatVC : IceBreakerBaseVC <UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, QBActionStatusDelegate, QBChatDelegate>{
     
     NSTimer *sendPresenceTimer;
     NSTimer *requestRoomsTimer;

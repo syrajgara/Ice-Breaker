@@ -7,8 +7,9 @@
 //
 
 #import "LoginVC.h"
+
 #import "SignupVC.h"
-#import "DataManager.h"
+#import "QBAuthenticator.h"
 
 @interface LoginVC()
 
@@ -26,65 +27,36 @@
   self.navigationController.navigationBarHidden=YES;
 }
 
-- (void)viewDidUnload
-{
-  [self setPassword:nil];
-  [self setUserName:nil];
-
-  [super viewDidUnload];
-  // Release any retained subviews of the main view.
-}
-
 - (IBAction)login:(UIButton *)sender
 {
-  NSLog(@" username = %@", self.userName.text);
-  
-  QBASessionCreationRequest *extendedAuthRequest = [QBASessionCreationRequest request];
-  extendedAuthRequest.userLogin =@"trupti";     //userName.text;
-  extendedAuthRequest.userPassword = @"password";     //password.text;
-  
-  [QBAuth createSessionWithExtendedRequest:extendedAuthRequest delegate:self];
+  QBAuthenticator *qbAuthenticator = [[QBAuthenticator alloc] init];
+
+  [qbAuthenticator loginWithUserName:self.userName.text
+                         andPassword:self.password.text
+            withLoginResponseHandler:self];
+
+/*
+ TESTING 
+ 
+ [qbAuthenticator loginWithUserName:@"trupti" //self.userName.text //
+ andPassword:@"password" //self.password.text //
+ withLoginResponseHandler:self];
+ */
 }
 
+/*
+ return seque uses this function to come back to login screen if signup was cancelled
+ */
 - (IBAction)cancelSignup:(UIStoryboardSegue *)segue
 {
   NSLog(@"signup cancelled");
 }
 
-#pragma mark - QBActionStatusDelegate
-
-// QuickBlox queries delegate
-- (void)completedWithResult:(Result *)result
-{
-  NSLog(@"completed login...");
-
-  // Create session result
-  if(result.success && [result isKindOfClass:QBAAuthSessionCreationResult.class])
-  {
-    // You have successfully created the session
-    QBAAuthSessionCreationResult *res = (QBAAuthSessionCreationResult *)result;
-    
-    // Sign In to QuickBlox Chat
-    QBUUser *currentUser = [QBUUser user];
-    currentUser.ID = res.session.userID; // your current user's ID
-    currentUser.password = @"password"; // your current user's password
-    
-    // save current user
-    [[DataManager shared] setCurrentUser: currentUser];
-    [[[DataManager shared] currentUser] setPassword:@"password"];
-    
-    // set Chat delegate
-    [QBChat instance].delegate = self;
-
-    // login to Chat
-    [[QBChat instance] loginWithUser:currentUser];
-    //[[QBChat instance] loginWithUser:[DataManager shared].currentUser];
-  }
-}
-
 #pragma mark - QBChatDelegate
 
-// Chat delegate
+/*
+ after succesful login and then signin to chat server, this delegate function is called
+ */
 -(void) chatDidLogin
 {
   NSLog(@"signed in ...");
