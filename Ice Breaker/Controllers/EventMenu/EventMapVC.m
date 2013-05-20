@@ -25,6 +25,24 @@
 {
   [super viewDidLoad];
   self.eventMap.showsUserLocation = YES;
+  
+  [self.eventMap setRegion:MKCoordinateRegionMake([self mapsCenterLocation], [self mapsRegionSpan])
+                  animated:NO];
+}
+
+- (CLLocationCoordinate2D) mapsCenterLocation
+{
+  // SCU location
+  CLLocationCoordinate2D coord;
+  coord.latitude = 37.3499438f;
+  coord.longitude = -121.9406449f;
+
+  return coord;
+}
+
+- (MKCoordinateSpan) mapsRegionSpan
+{
+  return MKCoordinateSpanMake(0.005, 0.005);
 }
 
 - (void)viewWillAppear:(BOOL)animated
