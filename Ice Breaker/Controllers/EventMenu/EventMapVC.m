@@ -42,7 +42,7 @@
 
 - (MKCoordinateSpan) mapsRegionSpan
 {
-  return MKCoordinateSpanMake(0.005, 0.005);
+  return MKCoordinateSpanMake(0.006, 0.006);
 }
 
 - (void)viewWillAppear:(BOOL)animated
