@@ -45,5 +45,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>344326109029743</string>
+	<key>FacebookDisplayName</key>
+	<string>Ice Breaker</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb344326109029743</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

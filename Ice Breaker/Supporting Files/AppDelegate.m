@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginVC.h"
 
 @implementation AppDelegate
 
@@ -56,11 +57,15 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    [self fbApplicationDidBecomeActive:application];
+    
   // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+  [self fbApplicationWillTerminate:application];
+    
   // Saves changes in the application's managed object context before the application terminates.
   [self saveContext];
 }
@@ -158,6 +163,98 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - FB Callback (iOS Notification)
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+  // Facebook SDK * login flow *
+  // Attempt to handle URLs to complete any auth (e.g., SSO) flow.
+  return [FBAppCall handleOpenURL:url
+                sourceApplication:sourceApplication
+                  fallbackHandler:^(FBAppCall *call)
+          {
+            // Facebook SDK * App Linking *
+            if (call.accessTokenData)
+            {
+              if ([FBSession activeSession].isOpen)
+              {
+                // For simplicity, this sample will ignore the link if the session is already
+                // open but a more advanced app could support features like user switching.
+                NSLog(@"INFO: Ignoring app link because current session is open.");
+              }
+              else
+              {
+                [self handleAppLink:call.accessTokenData];
+              }
+            }
+          }];
+}
+
+// Helper method to wrap logic for handling app links.
+- (void)handleAppLink:(FBAccessTokenData *)appLinkToken
+{
+  // Initialize a new blank session instance...
+  FBSession *appLinkSession = [[FBSession alloc] initWithAppID:nil
+                                                   permissions:nil
+                                               defaultAudience:FBSessionDefaultAudienceNone
+                                               urlSchemeSuffix:nil
+                                            tokenCacheStrategy:[FBSessionTokenCachingStrategy nullCacheInstance] ];
+
+  [FBSession setActiveSession:appLinkSession];
+
+  // ... and open it from the App Link's Token.
+  [appLinkSession openFromAccessTokenData:appLinkToken
+                        completionHandler:^(FBSession *session, FBSessionState status, NSError *error)
+   {
+     // Forward any errors to the FBLoginView delegate.
+     if (error) //
+     {
+       NSLog(@"FB Login ERROR");
+       // TODO seque to the login screen, instead of manual
+       UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhoneMainStoryboard.storyboard" bundle:nil];
+       LoginVC *loginVC = [storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+       [(UINavigationController*)self.window.rootViewController pushViewController:loginVC animated:NO];
+       
+       [loginVC loginView:nil handleError:error];
+     }
+   }];
+}
+
+- (void)fbApplicationWillTerminate:(UIApplication *)application
+{
+  // Facebook SDK * pro-tip *
+  // if the app is going away, we close the session object; this is a good idea because
+  // things may be hanging off the session, that need releasing (completion block, etc.) and
+  // other components in the app may be awaiting close notification in order to do cleanup
+  [FBSession.activeSession close];
+}
+
+- (void)fbApplicationDidBecomeActive:(UIApplication *)application
+{
+  // Facebook SDK * login flow *
+  // We need to properly handle activation of the application with regards to SSO
+  //  (e.g., returning from iOS 6.0 authorization dialog or from fast app switching).
+  [FBAppCall handleDidBecomeActive];
+}
+
+#pragma mark - UINavigationControllerDelegate
+
+- (void)navigationController:(UINavigationController *)navigationController
+       didShowViewController:(UIViewController *)viewController
+                    animated:(BOOL)animated
+{
+  self.isNavigating = NO;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController
+      willShowViewController:(UIViewController *)viewController
+                    animated:(BOOL)animated
+{
+  self.isNavigating = YES;
 }
 
 @end

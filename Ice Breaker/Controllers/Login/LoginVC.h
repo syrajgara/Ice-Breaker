@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 #import "IceBreakerBaseVC.h"
 
-@interface LoginVC : IceBreakerBaseVC <QBChatDelegate>
+@interface LoginVC : IceBreakerBaseVC <QBChatDelegate,FBLoginViewDelegate>
 
 @end
 
